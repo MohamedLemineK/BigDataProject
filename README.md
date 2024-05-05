@@ -1,5 +1,5 @@
 # BigDataProject
-Project to be made for Big Data
+Project to be made for the Big Data class ECE ING4 App
 
 In this project, our aim is to gather text files sharing a common theme. To do so we look at the most common words in each text.
 If two files share words that are frequent in both texts, we may consider them to be part of a same theme or to be 
