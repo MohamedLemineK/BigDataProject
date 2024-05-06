@@ -18,14 +18,20 @@ specific ressources. Intructions are to be presented in the following section.
 
 To run this project you need to :
 - Log into your [Databricks workspace](https://accounts.cloud.databricks.com/login?tuuid=1f15a7e6-a8ea-4d42-856d-dea4fac9358b)
-- Upload the `/pos` directory to you **DBFS** to your `/FileStore` so that all texts are contained in `/FileStore/pos/`
+- Upload the `/pos` directory to your **DBFS** `/FileStore` so that all texts are contained within `/FileStore/pos/`
 - Import the notebook `Gather.ipynb`
-- Run all cells of the notebook with any compute cluster
+- Run all cells of the notebook `Gather.ipynb` with any compute cluster of your choosing
 
 ### How it works ?
 
-The code first analyzes the texts and creates the `n` most common words in a text using the function `mostcommonwords(path,n)`. Its 
-arguments are the `path` where the file is located and the number `n` of words you would like to keep in your _dataframe_. 
+The code first analyzes the text and creates a dataframe containing the `n` most common words in a text using the function `mostcommonwords(path,n)`. Its 
+arguments are the `path` where the file is located and the number `n` of words you would like to keep in your _dataframe_. Here we chose to select the top **10** 
+most common words. To make sure our _dataframe_ is meaningful the function removes all **punctuation** and all **stopwords**. In a future development, we may 
+consider how `lemming` and `stemming` may have improved the model. These are techniques, we have used in a [different project relating to text analysis.](github.com/mohamedLemineK/Sentiment-Analysis)
+
+We then apply the function to the 6 `.txt` file contained in `/FileStore/pos/`  which results in the creation of 6 dataframes each containing **10** words.   
+
+
 
 
 
