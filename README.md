@@ -57,8 +57,8 @@ all the _dataframes_ using the function `nomenclatura(frames,names)`. This simpl
 
   Once this is done, the function `gathering(frames)` will be applied to the list of _dataframes_. This function is in charge of forming **committees**. Here, a 
 **committee**, similarly to its human counterpart, is a group of texts discussing a similar topic. The function `gathering(frames)` will create a _dictionnary_ containing
-the list of **committees** and the name of the _dataframes_ that are **members** of each **committee**. The name of the _dataframes_ is necessarily the same as the name
-of the file of which it originated.
+the list of **committees** and the name of the _dataframes_ that are **members** of each **committee**. The name of the _dataframe_ is necessarily
+the same as the name of the file from which it originated.
 
 #### <ins>3. Moving the files into their committees</ins>
 
@@ -69,7 +69,17 @@ each **committee**. It takes 3 arguments:
 - The `source` of files. A _string_ containing the path where the text files to be assembled are located. **WARNING : MUST ALWAYS END WITH `/`**
 - The `destination` path. A _string_ containing the path where the directories are to be stored. Default value is `/FileStore`
   
-  Once it has been executed directories will be created and the files will be placed accordingly.  
+  Once it has been executed directories will be created and the files will be placed accordingly. Two cells have been provided in order consult the creation
+and the disposition of files within them :
+```
+%fs
+ls /FileStore/
+```
+
+```
+%fs
+ls /FileStore/Committee2
+```
 
 
 
