@@ -25,12 +25,26 @@ To run this project you need to :
 
 ### How it works ?
 
+1. Analyzing the texts
+
   The code first analyzes the text and creates a dataframe containing the `n` most common words in a text using the function `mostcommonwords(path,n)`. Its 
 arguments are the `path` where the file is located and the number `n` of words you would like to keep in your _dataframe_. Here we chose to select the top **10** 
 most common words.
 
   To make sure our _dataframe_ is meaningful the function removes all **punctuation** and all **stopwords**. In a future development, we may 
-consider how `lemming` and `stemming` may have improved the model. These are techniques, we have used in a [different project relating to text analysis.](github.com/mohamedLemineK/Sentiment-Analysis) We then apply the function to the 6 `.txt` file contained in `/FileStore/pos/`  which results in the creation of 6 dataframes each containing **10** words.   
+consider how `lemming` and `stemming` may have improved the model. These are techniques, we have used in a [different project relating to text analysis.](github.com/mohamedLemineK/Sentiment-Analysis) 
+
+We then apply the function to the 6 `.txt` file contained in `/FileStore/pos/`  which results in the creation of 6 dataframes each containing **10** words. 
+
+2. Forming the committees
+
+  Next, we put all the _dataframes_ into a list called `dataframes` as well as all their names into a list called `names` and then assign an attribute `['name']` to
+all the _dataframes_ using the function `nomenclatura(frames,names)`. This simple function takes only two arguments the list of *dataframes* to be labeled in `frames`
+and the list of *names* to be given in `names`. This seemingly insignificant step is critical for the future management of files. 
+
+3. Moving the files into their committees
+
+
 
 
 
