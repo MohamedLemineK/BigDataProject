@@ -23,7 +23,7 @@ To run this project you need to :
 - Import the notebook `Gather.ipynb`
 - Run all cells of the notebook `Gather.ipynb` with any compute cluster of your choosing
 
-### How it works ?
+### How does it work ?
 
 #### <ins>1. Analyzing the texts</ins>
 
@@ -36,13 +36,26 @@ consider how `lemming` and `stemming` may have improved the model. These are tec
 
 We then apply the function to the 6 `.txt` file contained in `/FileStore/pos/`  which results in the creation of 6 dataframes each containing **10** words. 
 
+```
+cv994_12270 = mostcommonwords('FileStore/pos/cv994_12270.txt',10)
+cv995_21821 = mostcommonwords('FileStore/pos/cv995_21821.txt',10)
+cv996_11592 = mostcommonwords('FileStore/pos/cv996_11592.txt',10)
+cv997_5046 = mostcommonwords('FileStore/pos/cv997_5046.txt',10)
+cv998_14111 = mostcommonwords('FileStore/pos/cv998_14111.txt',10)
+cv999_13106 = mostcommonwords('FileStore/pos/cv999_13106.txt',10)
+```
+
 #### <ins>2. Forming the committees</ins>
 
   Next, we put all the _dataframes_ into a list called `dataframes` as well as all their names into a list called `names` and then assign an attribute `['name']` to
 all the _dataframes_ using the function `nomenclatura(frames,names)`. This simple function takes only two arguments the list of *dataframes* to be labeled in `frames`
-and the list of *names* to be given in `names`. This seemingly insignificant step is critical for the future management of files. 
+and the list of *names* to be given in `names`. This seemingly insignificant step is critical for the future management of files.
 
-#### 3. Moving the files into their committees
+  Once this is done, the function `gathering(frames)` will be applied to the list of _dataframes_. This function is in charge of forming **committees**. Here, a 
+**committee**, similarly to its human counterpart, is a group of texts discussing a similar topic. The function `gathering(frames)` will create a dictionnary containing
+the list of **committees** and the _dataframes_ that are **members** of each **committee**.
+
+#### <ins>3. Moving the files into their committees</ins>
 
 
 
