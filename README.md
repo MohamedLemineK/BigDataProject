@@ -53,11 +53,12 @@ all the _dataframes_ using the function `nomenclatura(frames,names)`. This simpl
 - the _list_ of *dataframes* to be labeled in `frames`
 - the _list_ of *names* to be given in `names`
 
-  This seemingly insignificant step is critical for the future management of files.
+This seemingly insignificant step is critical for the future management of files.
 
-  Once this is done, the function `gathering(frames)` will be applied to the list of _dataframes_. This function is in charge of forming **committees**. Here, a 
-**committee**, similarly to its human counterpart, is a group of texts discussing a similar topic. The function `gathering(frames)` will create a _dictionnary_ containing
-the list of **committees** and the name of the _dataframes_ that are **members** of each **committee**. The name of the _dataframe_ is necessarily
+Once this is done, the function `gathering(frames)` will be applied to the list of _dataframes_. This function is in charge of forming **committees**. Here, a **committee**, similarly to its human counterpart, is a group of texts discussing a similar topic. 
+
+The function `gathering(frames)` will create a _dictionnary_ containing the list of **committees** and the name of the _dataframes_ that 
+are **members** of each **committee**. The name of the _dataframe_ is necessarily
 the same as the name of the file from which it originated.
 
 #### <ins>3. Moving the files into their committees</ins>
