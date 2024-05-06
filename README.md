@@ -66,7 +66,7 @@ of the file of which it originated.
 each **committee**. It takes 3 arguments: 
 
 - The `dictionnary` which lists all the files contained in each **committee**
-- The `source` of files. A _string_ containing the path where the text files to be assembled are located. **WARNING : MUST ALWAYS END WITH `\`**
+- The `source` of files. A _string_ containing the path where the text files to be assembled are located. **WARNING : MUST ALWAYS END WITH `/`**
 - The `destination` path. A _string_ containing the path where the directories are to be stored. Default value is `/FileStore`
   
   Once it has been executed directories will be created and the files will be placed accordingly.  
