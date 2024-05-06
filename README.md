@@ -4,15 +4,16 @@
 
 ### Overview
 
-In this project, our aim is to gather text files sharing a common theme. To do so, we look at the most common words in each text.
+  In this project, our aim is to gather text files sharing a common theme. To do so, we look at the most common words in each text.
 If two files share words that are frequent in both texts, we may consider them to be part of a same theme or to be 
 discussing a similar topic. 
 
-The main technology used for this project is **Apache Spark** via the interface of **Databricks**. Based on this, we developed a python code capable
-of ***analyzing*** files and then ***assembling*** them into specific directories based on a ***general theme***. To run this code we are storing a directory
-on the Databricks File System containing multiple movie reviews to be used as an example. The code exploits some of the Databricks tools adapted to 
-the treatment of files such as the **Databricks Utilities** package. Suchly, the code may not be run on any IDE or any system as it calls for very
-specific ressources. Intructions are to be presented in the following section.
+  The main technology used for this project is **Apache Spark** via the interface of **Databricks**. Based on this, we developed a python code capable
+of ***analyzing*** files and then ***assembling*** them into specific directories based on a ***general theme***. 
+
+  To run this code we are storing a directory on the Databricks File System containing multiple movie reviews to be used as an example. The code exploits some of the Databricks tools adapted to the treatment of files such as the **Databricks Utilities** package.
+  
+  Suchly, the code may not be run on any IDE or any system as it calls for very specific ressources. Intructions are to be presented in the following section.
 
 ### Instructions
 
@@ -24,12 +25,12 @@ To run this project you need to :
 
 ### How it works ?
 
-The code first analyzes the text and creates a dataframe containing the `n` most common words in a text using the function `mostcommonwords(path,n)`. Its 
+  The code first analyzes the text and creates a dataframe containing the `n` most common words in a text using the function `mostcommonwords(path,n)`. Its 
 arguments are the `path` where the file is located and the number `n` of words you would like to keep in your _dataframe_. Here we chose to select the top **10** 
-most common words. To make sure our _dataframe_ is meaningful the function removes all **punctuation** and all **stopwords**. In a future development, we may 
-consider how `lemming` and `stemming` may have improved the model. These are techniques, we have used in a [different project relating to text analysis.](github.com/mohamedLemineK/Sentiment-Analysis)
+most common words.
 
-We then apply the function to the 6 `.txt` file contained in `/FileStore/pos/`  which results in the creation of 6 dataframes each containing **10** words.   
+  To make sure our _dataframe_ is meaningful the function removes all **punctuation** and all **stopwords**. In a future development, we may 
+consider how `lemming` and `stemming` may have improved the model. These are techniques, we have used in a [different project relating to text analysis.](github.com/mohamedLemineK/Sentiment-Analysis) We then apply the function to the 6 `.txt` file contained in `/FileStore/pos/`  which results in the creation of 6 dataframes each containing **10** words.   
 
 
 
