@@ -48,15 +48,28 @@ cv999_13106 = mostcommonwords('FileStore/pos/cv999_13106.txt',10)
 #### <ins>2. Forming the committees</ins>
 
   Next, we put all the _dataframes_ into a list called `dataframes` as well as all their names into a list called `names` and then assign an attribute `['name']` to
-all the _dataframes_ using the function `nomenclatura(frames,names)`. This simple function takes only two arguments the list of *dataframes* to be labeled in `frames`
-and the list of *names* to be given in `names`. This seemingly insignificant step is critical for the future management of files.
+all the _dataframes_ using the function `nomenclatura(frames,names)`. This simple function takes only two arguments:
+
+- the _list_ of *dataframes* to be labeled in `frames`
+- the _list_ of *names* to be given in `names`
+
+  This seemingly insignificant step is critical for the future management of files.
 
   Once this is done, the function `gathering(frames)` will be applied to the list of _dataframes_. This function is in charge of forming **committees**. Here, a 
-**committee**, similarly to its human counterpart, is a group of texts discussing a similar topic. The function `gathering(frames)` will create a dictionnary containing
-the list of **committees** and the _dataframes_ that are **members** of each **committee**.
+**committee**, similarly to its human counterpart, is a group of texts discussing a similar topic. The function `gathering(frames)` will create a _dictionnary_ containing
+the list of **committees** and the name of the _dataframes_ that are **members** of each **committee**. The name of the _dataframes_ is necessarily the same as the name
+of the file of which it originated.
 
 #### <ins>3. Moving the files into their committees</ins>
 
+  The last function is `directorycreation(dictionnary,source,destination='/FileStore')` is responsible for creating and filling the different directories reprensenting
+each **committee**. It takes 3 arguments: 
+
+- The `dictionnary` which lists all the files contained in each **committee**
+- The `source` of files. A _string_ containing the path where the text files to be assembled are located. **WARNING : MUST ALWAYS END WITH `\`**
+- The `destination` path. A _string_ containing the path where the directories are to be stored. Default value is `/FileStore`
+  
+  Once it has been executed directories will be created and the files will be placed accordingly.  
 
 
 
