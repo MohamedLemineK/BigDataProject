@@ -1,6 +1,6 @@
 # BigDataProject
 
-## Text File Relocation Project : Big Data class ECE ING4 App
+## Text File Relocation Project : Big Data ECE ING4 App
 
 ### Overview
 
@@ -34,9 +34,9 @@ most common words.
   To make sure our _dataframe_ is meaningful the function removes all **punctuation** and all **stopwords**. In a future development, we may 
 consider how `lemming` and `stemming` may have improved the model. These are techniques, we have used in a [different project relating to text analysis.](github.com/mohamedLemineK/Sentiment-Analysis) 
 
-We then apply the function to the 6 `.txt` file contained in `/FileStore/pos/`  which results in the creation of 6 dataframes each containing **10** words. 
+We then apply the function to the 6 `.txt` files contained in `/FileStore/pos/`. This results in the creation of 6 dataframes each containing **10** words. 
 
-```
+```python
 cv994_12270 = mostcommonwords('FileStore/pos/cv994_12270.txt',10)
 cv995_21821 = mostcommonwords('FileStore/pos/cv995_21821.txt',10)
 cv996_11592 = mostcommonwords('FileStore/pos/cv996_11592.txt',10)
@@ -63,26 +63,26 @@ the same as the name of the file from which it originated.
 
 #### <ins>3. Moving the files into their committees</ins>
 
-  The last function is `directorycreation(dictionnary,source,destination='/FileStore')` is responsible for creating and filling the different directories reprensenting
-each **committee**. It takes 3 arguments: 
+  The last function is `directorycreation(dictionnary,source,destination='/FileStore')` is responsible for creating and filling the different 
+directories representing each **committee**. It takes 3 arguments: 
 
 - The `dictionnary` which lists all the files contained in each **committee**
-- The `source` of files. A _string_ containing the path where the text files to be assembled are located. **WARNING : MUST ALWAYS END WITH `/`**
-- The `destination` path. A _string_ containing the path where the directories are to be stored. Default value is `/FileStore`
-  
-  Once it has been executed directories will be created and the files will be placed accordingly. Two cells have been provided in order consult the creation
+- The `source` of files. A _string_ containing the path where the text files to be assembled are located. **WARNING : THE PATH MUST ALWAYS END WITH `/`**
+- The `destination` path. A _string_ containing the path where the directories are to be stored. It must refer to an existing path. Default value is `/FileStore`
+
+Once it has been executed directories will be created and the files will be placed accordingly. Two cells have been provided in order to verify the creation
 and the disposition of files within them :
-```
+```bash
 %fs
 ls /FileStore/
 ```
 
-```
+```bash
 %fs
 ls /FileStore/Committee2
 ```
 
-
+Authors : **Cerina ALLEK** & **Mohamed Lemine KERKOUB** 
 
 
 
